@@ -1,1 +1,2 @@
-pub mod merge_sorted_array;
+mod merge_sorted_array;
+mod remove_element;

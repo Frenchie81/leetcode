@@ -6,20 +6,20 @@ impl Solution {
     pub fn remove_duplicates(nums: &mut [i32]) -> i32 {
         let mut k = 0;
         let len = nums.len();
+        let mut insert_at = 1;
 
         let mut i = 1;
-        while i < len - k {
+        while i < len {
             let prev = nums[i - 1];
             let cur = nums[i];
             if prev == cur {
                 k += 1;
-                // shift everything left
-                for j in i + 1..len {
-                    nums[j - 1] = nums[j];
-                }
             } else {
-                i += 1;
+                nums[insert_at] = cur;
+                insert_at += 1;
             }
+
+            i += 1;
         }
 
         (len - k) as i32

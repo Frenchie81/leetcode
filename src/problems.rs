@@ -11,3 +11,5 @@ mod remove_duplicates_from_sorted_array;
 mod remove_element;
 mod roman_to_integer;
 mod rotate_array;
+mod valid_palindrome;
+

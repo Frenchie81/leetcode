@@ -1,6 +1,7 @@
 mod best_time_to_buy_and_sell_stock;
 mod best_time_to_buy_and_sell_stock_ii;
 mod find_the_index_of_the_first_occurrence_in_a_string;
+mod is_subsequence;
 mod jump_game;
 mod length_of_last_word;
 mod longest_common_prefix;
@@ -12,4 +13,3 @@ mod remove_element;
 mod roman_to_integer;
 mod rotate_array;
 mod valid_palindrome;
-

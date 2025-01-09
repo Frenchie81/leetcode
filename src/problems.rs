@@ -15,3 +15,5 @@ mod remove_element;
 mod roman_to_integer;
 mod rotate_array;
 mod valid_palindrome;
+mod word_pattern;
+

@@ -7,6 +7,7 @@ mod length_of_last_word;
 mod longest_common_prefix;
 mod majority_element;
 mod merge_sorted_array;
+mod ransom_note;
 mod remove_dupliates_from_sorted_array_ii;
 mod remove_duplicates_from_sorted_array;
 mod remove_element;

@@ -20,4 +20,5 @@ mod summary_ranges;
 mod two_sum;
 mod valid_anagram;
 mod valid_palindrome;
+mod valid_parentheses;
 mod word_pattern;

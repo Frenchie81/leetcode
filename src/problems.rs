@@ -10,6 +10,7 @@ mod length_of_last_word;
 mod linked_list_cycle;
 mod longest_common_prefix;
 mod majority_element;
+mod maximum_depth_of_binary_tree;
 mod merge_sorted_array;
 mod merge_two_sorted_lists;
 mod ransom_note;

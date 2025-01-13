@@ -3,6 +3,7 @@ mod best_time_to_buy_and_sell_stock_ii;
 mod contains_duplicate_ii;
 mod find_the_index_of_the_first_occurrence_in_a_string;
 mod happy_number;
+mod invert_binary_tree;
 mod is_subsequence;
 mod isomorphic_strings;
 mod jump_game;

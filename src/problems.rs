@@ -22,6 +22,7 @@ mod roman_to_integer;
 mod rotate_array;
 mod same_tree;
 mod summary_ranges;
+mod symmetric_tree;
 mod two_sum;
 mod valid_anagram;
 mod valid_palindrome;

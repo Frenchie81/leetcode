@@ -1,3 +1,4 @@
+mod average_of_levels_in_binary_tree;
 mod best_time_to_buy_and_sell_stock;
 mod best_time_to_buy_and_sell_stock_ii;
 mod contains_duplicate_ii;

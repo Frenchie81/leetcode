@@ -16,6 +16,7 @@ mod majority_element;
 mod maximum_depth_of_binary_tree;
 mod merge_sorted_array;
 mod merge_two_sorted_lists;
+mod minimum_absolute_difference_in_bst;
 mod path_sum;
 mod ransom_note;
 mod remove_dupliates_from_sorted_array_ii;

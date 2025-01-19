@@ -30,6 +30,7 @@ mod roman_to_integer;
 mod rotate_array;
 mod same_tree;
 mod search_insert_position;
+mod single_number;
 mod summary_ranges;
 mod symmetric_tree;
 mod two_sum;

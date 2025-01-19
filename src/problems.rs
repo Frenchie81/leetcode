@@ -2,6 +2,7 @@ mod add_binary;
 mod average_of_levels_in_binary_tree;
 mod best_time_to_buy_and_sell_stock;
 mod best_time_to_buy_and_sell_stock_ii;
+mod climbing_stairs;
 mod contains_duplicate_ii;
 mod convert_sorted_array_to_binary_search_tree;
 mod count_complete_tree_nodes;

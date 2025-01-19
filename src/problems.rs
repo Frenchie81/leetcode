@@ -22,6 +22,7 @@ mod minimum_absolute_difference_in_bst;
 mod number_of_1_bits;
 mod palindrome_number;
 mod path_sum;
+mod plus_one;
 mod ransom_note;
 mod remove_dupliates_from_sorted_array_ii;
 mod remove_duplicates_from_sorted_array;

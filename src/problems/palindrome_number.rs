@@ -7,15 +7,22 @@ impl Solution {
             return false;
         }
 
-        let x: Vec<char> = x.to_string().chars().collect();
-        for i in 0..x.len() {
-            let j = x.len() - (i + 1);
-            if i > j {
-                break;
-            }
-            if x[i] != x[j] {
+        let mut x = x as i64;
+        let mut div = 1_i64;
+        while x >= 10_i64 * div {
+            div *= 10;
+        }
+
+        while x > 0 {
+            let right = x % 10;
+            let left = x / div;
+
+            if left != right {
                 return false;
             }
+
+            x = (x % div) / 10;
+            div /= 100;
         }
 
         true
@@ -51,5 +58,14 @@ mod tests {
         let output = Solution::is_palindrome(x);
 
         assert!(!output);
+    }
+
+    #[test]
+    fn wrong_answer1() {
+        let x = 1410110141;
+
+        let output = Solution::is_palindrome(x);
+
+        assert!(output);
     }
 }

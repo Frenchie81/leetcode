@@ -43,4 +43,5 @@ mod two_sum_ii;
 mod valid_anagram;
 mod valid_palindrome;
 mod valid_parentheses;
+mod valid_sodoku;
 mod word_pattern;

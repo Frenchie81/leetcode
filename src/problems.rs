@@ -38,6 +38,7 @@ mod sqrt_x;
 mod summary_ranges;
 mod symmetric_tree;
 mod two_sum;
+mod two_sum_ii;
 mod valid_anagram;
 mod valid_palindrome;
 mod valid_parentheses;

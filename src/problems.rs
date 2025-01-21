@@ -7,6 +7,7 @@ mod contains_duplicate_ii;
 mod convert_sorted_array_to_binary_search_tree;
 mod count_complete_tree_nodes;
 mod find_the_index_of_the_first_occurrence_in_a_string;
+mod group_anagrams;
 mod happy_number;
 mod invert_binary_tree;
 mod is_subsequence;

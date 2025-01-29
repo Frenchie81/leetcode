@@ -28,6 +28,7 @@ mod merge_two_sorted_lists;
 mod minimum_absolute_difference_in_bst;
 mod minimum_size_subarray_sum;
 mod number_of_1_bits;
+mod number_of_islands;
 mod palindrome_number;
 mod path_sum;
 mod plus_one;

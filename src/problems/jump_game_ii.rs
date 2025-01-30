@@ -12,22 +12,34 @@ impl Solution {
         }
 
         let target = nums.len() - 1;
-        let mut max_index = 0;
         let mut jumps = 0;
+        let mut i = 0;
 
-        for (x, val) in nums.iter().enumerate() {
-            let max_from_here = x + *val as usize;
-            if max_from_here > max_index {
-                max_index = max_from_here;
+        //         let nums = vec![7, 0, 9, 6, 9, 6, 1, 7, 9, 0, 1, 2, 9, 0, 3];
+        while i < target {
+            let val = nums[i];
+            let max_from_here = i + val as usize;
+            if max_from_here >= target {
                 jumps += 1;
-            }
-
-            if max_index >= target {
                 return jumps;
             }
+
+            let mut next_max_jump = max_from_here;
+            let mut next_i = i;
+            (i..=max_from_here).for_each(|j| {
+                let val2 = nums[j];
+                let next_max = j + val2 as usize;
+                if next_max > next_max_jump {
+                    next_max_jump = next_max;
+                    next_i = j;
+                }
+            });
+
+            jumps += 1;
+            i = next_i;
         }
 
-        0
+        jumps
     }
 }
 

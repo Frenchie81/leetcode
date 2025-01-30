@@ -15,7 +15,6 @@ impl Solution {
         let mut jumps = 0;
         let mut i = 0;
 
-        //         let nums = vec![7, 0, 9, 6, 9, 6, 1, 7, 9, 0, 1, 2, 9, 0, 3];
         while i < target {
             let val = nums[i];
             let max_from_here = i + val as usize;

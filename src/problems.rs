@@ -16,6 +16,7 @@ mod invert_binary_tree;
 mod is_subsequence;
 mod isomorphic_strings;
 mod jump_game;
+mod jump_game_ii;
 mod kth_smallest_element_in_a_bst;
 mod length_of_last_word;
 mod linked_list_cycle;

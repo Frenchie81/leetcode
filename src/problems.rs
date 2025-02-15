@@ -34,6 +34,7 @@ mod number_of_islands;
 mod palindrome_number;
 mod path_sum;
 mod plus_one;
+mod product_of_array_except_self;
 mod ransom_note;
 mod remove_dupliates_from_sorted_array_ii;
 mod remove_duplicates_from_sorted_array;

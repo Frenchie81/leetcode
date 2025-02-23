@@ -3,42 +3,44 @@ struct Solution;
 
 impl Solution {
     pub fn can_complete_circuit(gas: Vec<i32>, cost: Vec<i32>) -> i32 {
-        for (i, val) in gas.iter().enumerate() {
-            let mut starting_gas = *val;
-            let result = Self::recurse(&gas, &cost, i, i + 1, &mut starting_gas);
-
-            if result > -1 {
-                return result;
-            }
-        }
-
-        -1
-    }
-
-    fn recurse(
-        gas: &[i32],
-        cost: &[i32],
-        start_pos: usize,
-        cur_pos: usize,
-        cur_gas: &mut i32,
-    ) -> i32 {
-        let mut cur_pos = cur_pos;
-        if cur_pos >= gas.len() {
-            cur_pos -= gas.len();
-        }
-
-        *cur_gas -= cost[cur_pos];
-        if *cur_gas < 0 {
+        if gas.is_empty() {
             return -1;
         }
 
-        if start_pos == cur_pos {
-            return start_pos as i32;
+        if gas.len() == 1 {
+            if gas[0] >= cost[0] {
+                return 0;
+            } else {
+                return -1;
+            }
         }
 
-        *cur_gas += gas[cur_pos];
+        let mut sum = 0;
+        let mut run = 0;
+        let mut output = -1;
 
-        Self::recurse(gas, cost, start_pos, cur_pos + 1, cur_gas)
+        for (i, gas) in gas.iter().enumerate() {
+            let cost = cost[i];
+            let diff = gas - cost;
+            run += diff;
+
+            if output == -1 && run >= 0 {
+                output = i as i32;
+            }
+
+            if run < 0 {
+                run = 0;
+                output = -1;
+            }
+
+            sum += diff;
+        }
+
+        if sum >= 0 {
+            output
+        } else {
+            -1
+        }
     }
 }
 
@@ -64,5 +66,35 @@ mod tests {
         let output = Solution::can_complete_circuit(gas, cost);
 
         assert_eq!(-1, output);
+    }
+
+    #[test]
+    fn wrong_answer1() {
+        let gas = vec![0, 0, 0, 0, 0, 0, 2];
+        let cost = vec![0, 0, 0, 0, 0, 1, 0];
+
+        let output = Solution::can_complete_circuit(gas, cost);
+
+        assert_eq!(6, output);
+    }
+
+    #[test]
+    fn wrong_answer2() {
+        let gas = vec![2];
+        let cost = vec![2];
+
+        let output = Solution::can_complete_circuit(gas, cost);
+
+        assert_eq!(0, output);
+    }
+
+    #[test]
+    fn wrong_answer3() {
+        let gas = vec![5, 1, 2, 3, 4];
+        let cost = vec![4, 4, 1, 5, 1];
+        //                      1,-3, 1,-2, 3
+        let output = Solution::can_complete_circuit(gas, cost);
+
+        assert_eq!(4, output);
     }
 }

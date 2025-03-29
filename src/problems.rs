@@ -47,6 +47,7 @@ mod same_tree;
 mod search_insert_position;
 mod simplify_path;
 mod single_number;
+mod spiral_matrix;
 mod sqrt_x;
 mod summary_ranges;
 mod symmetric_tree;
